@@ -1,0 +1,21 @@
+_export:
+  plugin:
+    repositories:
+      - file:///tmp/digdag-plugin-fluent/build/repo/
+      # - https://jitpack.io
+    dependencies:
+      - io.digdag.plugin:digdag-plugin-fluent:0.1.3
+      # - com.github.myui:digdag-plugin-example:v0.1.3
+  fluent:
+    host: localhost
+    port: 24224
+    tag: app
+
++step1:
+  fluent>: template.txt
+  message: yes
+#  path: example.out
+
+#+step2:
+#  hello>: "hello "
+#  message: world
